@@ -48,6 +48,8 @@
     <Compile Include="TPM\Neuron\INeuron.cs" />
     <Compile Include="TPM\Neuron\Neuron.cs" />
     <Compile Include="TPM\Synapse\ISynapse.cs" />
+    <Compile Include="TPM\Synapse\MultiplyerSynapse.cs" />
+    <Compile Include="TPM\Synapse\SummarizeSynapse.cs" />
     <Compile Include="TPM\Synapse\Synapse.cs" />
     <Compile Include="TPM\TPM.cs" />
     <Compile Include="TPM\TPMConfiguration.cs" />
