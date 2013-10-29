@@ -2,9 +2,9 @@
 
 namespace TPM.TPM.Synapse
 {
-    public class Synapse: ISynapse
+    public abstract class Synapse: ISynapse
     {
-        public Synapse(INeuron sourceNeuron, INeuron targetNeuron, int weight)
+        protected Synapse(INeuron sourceNeuron, INeuron targetNeuron, int weight = int.MinValue)
         {
             SourceNeuron = sourceNeuron;
             TargetNeuron = targetNeuron;
@@ -16,12 +16,9 @@ namespace TPM.TPM.Synapse
         public INeuron SourceNeuron { get; private set; }
         
         public INeuron TargetNeuron { get; private set; }
-        
-        public void Propagate()
-        {
-            TargetNeuron.Input = Weight*SourceNeuron.Output;
-        }
 
+        public abstract void Propagate();
+        
         public void UpdateWeight(int newWeight)
         {
             Weight = newWeight;
