@@ -21,5 +21,10 @@ namespace TPM.TPM.Synapse
         {
             TargetNeuron.Input = Weight*SourceNeuron.Output;
         }
+
+        public void UpdateWeight(int newWeight)
+        {
+            Weight = newWeight;
+        }
     }
 }

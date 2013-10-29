@@ -10,5 +10,6 @@ namespace TPM.TPM.Synapse
         INeuron TargetNeuron { get; }
 
         void Propagate();
+        void UpdateWeight(int newWeight);
     }
 }
