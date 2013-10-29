@@ -12,8 +12,13 @@ namespace TPM.TPM.Neuron
         }
 
         public int Input { get; set; }
-        public int Output { get; set; }
-        
+
+        public int Output
+        {
+            get { return Input <= 0 ? -1 : 1; }
+            set {  }
+        }
+
         public List<ISynapse> SourceSynapses { get; private set; }
         public List<ISynapse> TargetSynapses { get; private set; }
 
