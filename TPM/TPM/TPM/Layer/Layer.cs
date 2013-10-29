@@ -6,12 +6,14 @@ namespace TPM.TPM.Layer
 {
     public class Layer : ILayer
     {
-        public Layer(List<INeuron> neurons )
+        public Layer(List<INeuron> neurons , ILayer nextLayer)
         {
             Neurons = neurons;
+            this.nextLayer = nextLayer;
         }
 
         public List<INeuron> Neurons { get; private set; }
+        private ILayer nextLayer { get; set; }
 
         public INeuron this[int index]
         {
@@ -21,6 +23,8 @@ namespace TPM.TPM.Layer
         public void Run()
         {
             Neurons.ForEach(x=> x.Run());
+            if (nextLayer != null)
+                nextLayer.Run();
         }
 
         public int GetOutput()
