@@ -1,12 +1,17 @@
-﻿namespace TPM.TPM
+﻿using TPM.TPM.Layer;
+
+namespace TPM.TPM
 {
     public class TPM
     {
-        private readonly TPMConfiguration configuration;
+        public ILayer InputLayer { get; private set; }
+        public ILayer OutputLayer { get; private set; }
 
-        public TPM(TPMConfiguration configuration)
+
+        public TPM(ILayer inputLayer , ILayer outputLayer)
         {
-            this.configuration = configuration;
+            InputLayer = inputLayer;
+            OutputLayer = outputLayer;
         }
 
     }
