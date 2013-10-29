@@ -31,7 +31,7 @@ namespace TPM.TPM
                 var neuron = new Neuron.Neuron();
                 foreach (var hiddenNeuron in hiddenNeurons)
                 {
-                    var weight = random.Next(configuration.WeightRange);
+                    var weight = random.Next(configuration.WeightRange*-1, configuration.WeightRange);
                     var synapse = new Synapse.SummarizeSynapse(neuron , hiddenNeuron , weight);
                     neuron.TargetSynapses.Add(synapse);
                     hiddenNeuron.SourceSynapses.Add(synapse);
