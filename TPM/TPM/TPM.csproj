@@ -43,6 +43,15 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TPM\Layer\ILayer.cs" />
+    <Compile Include="TPM\Layer\Layer.cs" />
+    <Compile Include="TPM\Neuron\INeuron.cs" />
+    <Compile Include="TPM\Neuron\Neuron.cs" />
+    <Compile Include="TPM\Synapse\ISynapse.cs" />
+    <Compile Include="TPM\Synapse\Synapse.cs" />
+    <Compile Include="TPM\TPM.cs" />
+    <Compile Include="TPM\TPMConfiguration.cs" />
+    <Compile Include="TPM\TPMFactory.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
