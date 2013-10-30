@@ -54,6 +54,7 @@
     <Compile Include="TPM\TPM.cs" />
     <Compile Include="TPM\TPMConfiguration.cs" />
     <Compile Include="TPM\TPMFactory.cs" />
+    <Compile Include="Tutor.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
