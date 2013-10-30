@@ -18,10 +18,16 @@ namespace TPM.TPM
         public int Run(int[] input)
         {
             var i = 0;
-            OutputLayer[0].Input = 1;
+            Refresh();
             InputLayer.Neurons.ForEach(x => x.Input = input[i++]);
             InputLayer.Run();
             return OutputLayer.Neurons.First().Output;
+        }
+
+        public void Refresh()
+        {
+            InputLayer.NextLayer.Neurons.ForEach(x=> x.Input = 0);
+            OutputLayer.Neurons.ForEach(x=>x.Input = 1);
         }
     }
 }
