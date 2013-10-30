@@ -6,10 +6,9 @@ namespace TPM.TPM.Synapse
     {
         public SummarizeSynapse(INeuron sourceNeuron, INeuron targetNeuron, int weight = int.MinValue)
             : base(sourceNeuron, targetNeuron, weight){}
-
         public override void Propagate()
         {
-            TargetNeuron.Input = Weight*SourceNeuron.Output;
+            TargetNeuron.Input += Weight*SourceNeuron.Output;
         }
     }
 }
